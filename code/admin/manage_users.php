@@ -286,7 +286,7 @@ if (!isset($_GET['do'])) { ?>
                     </td> -->
                     <td><?php echo isset($user['user_name']) ? $user['user_name'] : ''; ?></td>
                     <td><?php echo isset($user['user_email']) ? $user['user_email'] : ''; ?></td>
-                    <td><?php echo isset($user['user_password']) ? $user['user_password'] : ''; ?></td>
+                    <td><?php echo isset($user['user_password']) ? '*********' : ''; ?></td>
                     <td><?php echo isset($user['user_gender']) ? $user['user_gender'] : ''; ?></td>
                     <td><?php echo isset($user['user_creation_date']) ? $user['user_creation_date'] : ''; ?></td>
                     <td>
