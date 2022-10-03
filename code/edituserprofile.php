@@ -69,23 +69,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $check          = 0;
         $passError      = "The password shouldn't be empty!";
     }
-    if (!isset($user['user_image'])) {
+  if (!isset($user['user_image'])) {
         if (($image["size"]) == 0) {
             $target_file    = $user[0]['user_image'];
             $image_check    = "";
-        }else {         
-                    $image_folder   = "admin/uploads/user_image/";
-                    $target_file    = $image_folder . basename($image["name"]);
-                    $image_check    = ",user_image='$target_file'";
-                    move_uploaded_file($image["tmp_name"], $target_file);
         }
-    } 
+    }
+    //Image File
+    $image_folder   = "admin/uploads/user_image/";
+    $target_file    = $image_folder . uniqid() . basename($image["name"]);
+    $image_check    = ",user_image='$target_file'";
 
-    
-    
-    
+    move_uploaded_file($image["tmp_name"], $target_file);
     if ($check == 1) {
-    
+
         $id = (int)$_SESSION["user_id"];
 
         $sql2 = "UPDATE users  SET user_name = '$name', user_email ='$email', user_mobile='$mobile', user_location='$location', user_gender='$gender', user_password='$password' {$image_check} WHERE user_id =$id ";
