@@ -12,12 +12,12 @@ $result = mysqli_query($conn, $sql);
 $tags = mysqli_fetch_all($result, MYSQLI_ASSOC);
 $tagsArray = [];
 if (isset($_POST['numPage'])) {
-	$results_per_page = $_POST['numPage'];
+    $results_per_page = $_POST['numPage'];
 } else {
-	$results_per_page = 12;
+    $results_per_page = 12;
 }
 foreach ($tags as $key => $value) {
-	array_push($tagsArray, $value['product_tag']);
+    array_push($tagsArray, $value['product_tag']);
 }
 $tags_unique = array_unique($tagsArray);
 // define how many results you want per page
@@ -98,7 +98,7 @@ $tags_unique = array_unique($tagsArray);
                                 <li class="p-b-6">
                                     <a href="?sort=all"
                                         class="filter-link stext-106 trans-04 <?php echo isset($_GET['sort']) && $_GET['sort'] == 'all' ? "filter-link-active" : ""; ?>">
-                                        $200.00+
+                                        $200.00 - $500.00
                                     </a>
                                 </li>
                             </ul>
@@ -126,119 +126,119 @@ $tags_unique = array_unique($tagsArray);
         <!-- end of filter  -->
 
         <?php
-		// getAllFrom($field, $table, $where = NULL, $and = NULL, $orderfield, $ordering = "DESC")
-		// $getAll = ("SELECT $field FROM $table $where $and ORDER BY $orderfield $ordering");
-		if (isset($_GET["sort"])) {
-			if ($_GET["sort"] == "high") {
-				$sql = "SELECT * FROM products ORDER BY product_price DESC";
-				$result = mysqli_query($conn, $sql);
-				$product = mysqli_fetch_all($result, MYSQLI_ASSOC);
-			} //=================================================
-			if ($_GET["sort"] == "category") {
-				$id = (int)$_GET["id"];
-				$sql = "SELECT * FROM products WHERE product_categorie_id=$id";
-				$result = mysqli_query($conn, $sql);
-				$product = mysqli_fetch_all($result, MYSQLI_ASSOC);
-			}
-			if ($_GET["sort"] == "tag") {
-				$name = $_GET["name"];
-				$sql = "SELECT * FROM products WHERE product_tag ='{$name}'";
-				$result = mysqli_query($conn, $sql);
-				$product = mysqli_fetch_all($result, MYSQLI_ASSOC);
-			}
-			if ($_GET["sort"] == "low") {
-				$sql = "SELECT * FROM products ORDER BY product_price ASC";
-				$result = mysqli_query($conn, $sql);
-				$product = mysqli_fetch_all($result, MYSQLI_ASSOC);
-			}
-			if ($_GET["sort"] == "rating") {
-				$sql = "SELECT * FROM products ORDER BY product_rate DESC";
-				$result = mysqli_query($conn, $sql);
-				$product = mysqli_fetch_all($result, MYSQLI_ASSOC);
-			}
-			if ($_GET["sort"] == "newness") {
-				$sql = "SELECT * FROM products ORDER BY product_date DESC";
-				$result = mysqli_query($conn, $sql);
-				$product = mysqli_fetch_all($result, MYSQLI_ASSOC);
-			}
-			if ($_GET["sort"] == 50) {
-				$sql = "SELECT * FROM products WHERE product_price BETWEEN 0 AND 50";
-				$result = mysqli_query($conn, $sql);
-				$product = mysqli_fetch_all($result, MYSQLI_ASSOC);
-			}
-			if ($_GET["sort"] == 100) {
-				$sql = "SELECT * FROM products WHERE product_price BETWEEN 50 AND 100";
-				$result = mysqli_query($conn, $sql);
-				$product = mysqli_fetch_all($result, MYSQLI_ASSOC);
-			}
-			if ($_GET["sort"] == 150) {
-				$sql = "SELECT * FROM products WHERE product_price BETWEEN 100 AND 150";
-				$result = mysqli_query($conn, $sql);
-				$product = mysqli_fetch_all($result, MYSQLI_ASSOC);
-			}
-			if ($_GET["sort"] == 200) {
-				$sql = "SELECT * FROM products WHERE product_price BETWEEN 150 AND 200";
-				$result = mysqli_query($conn, $sql);
-				$product = mysqli_fetch_all($result, MYSQLI_ASSOC);
-			}
-			if ($_GET["sort"] == "all") {
-				$sql = "SELECT * FROM products WHERE product_price>200";
-				$result = mysqli_query($conn, $sql);
-				$product = mysqli_fetch_all($result, MYSQLI_ASSOC);
-			}
-		} else if (isset($_GET["search"])) {
-			$search = $_GET["search"];
-			$sql = "SELECT * FROM products WHERE product_tag LIKE '%{$search}%' OR product_name LIKE '%{$search}%'";
-			$result = mysqli_query($conn, $sql);
-			$product = mysqli_fetch_all($result, MYSQLI_ASSOC);
-			if (count($product) == 0) {
-				$searchError = "No items found";
-			}
-		} else {
-			$sql = "SELECT * FROM products";
-			$result = mysqli_query($conn, $sql);
+        // getAllFrom($field, $table, $where = NULL, $and = NULL, $orderfield, $ordering = "DESC")
+        // $getAll = ("SELECT $field FROM $table $where $and ORDER BY $orderfield $ordering");
+        if (isset($_GET["sort"])) {
+            if ($_GET["sort"] == "high") {
+                $sql = "SELECT * FROM products ORDER BY product_price DESC";
+                $result = mysqli_query($conn, $sql);
+                $product = mysqli_fetch_all($result, MYSQLI_ASSOC);
+            } //=================================================
+            if ($_GET["sort"] == "category") {
+                $id = (int)$_GET["id"];
+                $sql = "SELECT * FROM products WHERE product_categorie_id=$id";
+                $result = mysqli_query($conn, $sql);
+                $product = mysqli_fetch_all($result, MYSQLI_ASSOC);
+            }
+            if ($_GET["sort"] == "tag") {
+                $name = $_GET["name"];
+                $sql = "SELECT * FROM products WHERE product_tag ='{$name}'";
+                $result = mysqli_query($conn, $sql);
+                $product = mysqli_fetch_all($result, MYSQLI_ASSOC);
+            }
+            if ($_GET["sort"] == "low") {
+                $sql = "SELECT * FROM products ORDER BY product_price ASC";
+                $result = mysqli_query($conn, $sql);
+                $product = mysqli_fetch_all($result, MYSQLI_ASSOC);
+            }
+            if ($_GET["sort"] == "rating") {
+                $sql = "SELECT * FROM products ORDER BY product_rate DESC";
+                $result = mysqli_query($conn, $sql);
+                $product = mysqli_fetch_all($result, MYSQLI_ASSOC);
+            }
+            if ($_GET["sort"] == "newness") {
+                $sql = "SELECT * FROM products ORDER BY product_date DESC";
+                $result = mysqli_query($conn, $sql);
+                $product = mysqli_fetch_all($result, MYSQLI_ASSOC);
+            }
+            if ($_GET["sort"] == 50) {
+                $sql = "SELECT * FROM products WHERE product_price BETWEEN 0 AND 50";
+                $result = mysqli_query($conn, $sql);
+                $product = mysqli_fetch_all($result, MYSQLI_ASSOC);
+            }
+            if ($_GET["sort"] == 100) {
+                $sql = "SELECT * FROM products WHERE product_price BETWEEN 50 AND 100";
+                $result = mysqli_query($conn, $sql);
+                $product = mysqli_fetch_all($result, MYSQLI_ASSOC);
+            }
+            if ($_GET["sort"] == 150) {
+                $sql = "SELECT * FROM products WHERE product_price BETWEEN 100 AND 150";
+                $result = mysqli_query($conn, $sql);
+                $product = mysqli_fetch_all($result, MYSQLI_ASSOC);
+            }
+            if ($_GET["sort"] == 200) {
+                $sql = "SELECT * FROM products WHERE product_price BETWEEN 150 AND 200";
+                $result = mysqli_query($conn, $sql);
+                $product = mysqli_fetch_all($result, MYSQLI_ASSOC);
+            }
+            if ($_GET["sort"] == "all") {
+                $sql = "SELECT * FROM products WHERE product_price>200";
+                $result = mysqli_query($conn, $sql);
+                $product = mysqli_fetch_all($result, MYSQLI_ASSOC);
+            }
+        } else if (isset($_GET["search"])) {
+            $search = $_GET["search"];
+            $sql = "SELECT * FROM products WHERE product_tag LIKE '%{$search}%' OR product_name LIKE '%{$search}%'";
+            $result = mysqli_query($conn, $sql);
+            $product = mysqli_fetch_all($result, MYSQLI_ASSOC);
+            if (count($product) == 0) {
+                $searchError = "No items found";
+            }
+        } else {
+            $sql = "SELECT * FROM products";
+            $result = mysqli_query($conn, $sql);
 
-			$number_of_results = mysqli_num_rows($result);
-			//determine number of total pages available
-			$number_of_pages = ceil($number_of_results / $results_per_page);
-			// determine which page number visitor is currently on
-			if (!isset($_GET['page'])) {
-				$page = 1;
-			} else {
-				$page = $_GET['page'];
-			}
-			// determine the sql LIMIT starting number for the results on the displaying page
-			$this_page_first_result = ($page - 1) * $results_per_page;
-			$sql = 'SELECT * FROM products LIMIT ' . $this_page_first_result . ',' .  $results_per_page;
-			$result = mysqli_query($conn, $sql);
-			$product = mysqli_fetch_all($result, MYSQLI_ASSOC);
-		}
-		?>
+            $number_of_results = mysqli_num_rows($result);
+            //determine number of total pages available
+            $number_of_pages = ceil($number_of_results / $results_per_page);
+            // determine which page number visitor is currently on
+            if (!isset($_GET['page'])) {
+                $page = 1;
+            } else {
+                $page = $_GET['page'];
+            }
+            // determine the sql LIMIT starting number for the results on the displaying page
+            $this_page_first_result = ($page - 1) * $results_per_page;
+            $sql = 'SELECT * FROM products LIMIT ' . $this_page_first_result . ',' .  $results_per_page;
+            $result = mysqli_query($conn, $sql);
+            $product = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        }
+        ?>
 
         <div class="row col-md-8 ">
             <?php echo isset($searchError) ? '<h1 style="margin: auto;">' . $searchError . "</h1>" : "";
-			foreach ($product as $val) { ?>
+            foreach ($product as $val) { ?>
 
             <div class="col-sm-6 col-md-4 col-12 col-lg-3 mt-3 p-b-35 isotope-item <?php
-							if ($val["product_tag"] == "bag") {
-								echo "bag";
-							}
-							if ($val["product_tag"] == "women") {
-								echo "women";
-							}
-							if ($val["product_tag"] == "shoes") {
-								echo "shoes";
-							}
-							if ($val["product_tag"] == "sales") {
-								echo "sales";
-							}
-							if ($val["product_tag"] == "new") {
-								echo "new";
-							}
-							if ($val["product_tag"] == "men") {
-								echo "men";
-							}
-							?>">
+                                                                                        if ($val["product_tag"] == "bag") {
+                                                                                            echo "bag";
+                                                                                        }
+                                                                                        if ($val["product_tag"] == "women") {
+                                                                                            echo "women";
+                                                                                        }
+                                                                                        if ($val["product_tag"] == "shoes") {
+                                                                                            echo "shoes";
+                                                                                        }
+                                                                                        if ($val["product_tag"] == "sales") {
+                                                                                            echo "sales";
+                                                                                        }
+                                                                                        if ($val["product_tag"] == "new") {
+                                                                                            echo "new";
+                                                                                        }
+                                                                                        if ($val["product_tag"] == "men") {
+                                                                                            echo "men";
+                                                                                        }
+                                                                                        ?>">
                 <!-- Block2 -->
                 <div class="block2">
                     <a href="product-detail.php?id=<?php echo $val['product_id']; ?>">
@@ -396,13 +396,13 @@ a {
     <div class="pagination p9">
         <ul>
             <?php
-			if (isset($_GET['page'])) {
-				for ($page = 1; $page <= $number_of_pages; $page++) { ?>
+            if (isset($_GET['page'])) {
+                for ($page = 1; $page <= $number_of_pages; $page++) { ?>
             <a <?php echo $_GET['page'] == $page ? 'class="is-active"' : ""; ?>href="?page=<?php echo $page ?>">
                 <li><?php echo $page ?></li>
             </a>
             <?php }
-			} ?>
+            } ?>
         </ul>
     </div>
 
