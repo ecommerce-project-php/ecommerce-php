@@ -2,7 +2,7 @@
 
 ## Synopsis
 
-This Project is an E_commerce website that sells clothes and accessories for women, men, and kids.
+This Project is an E_commerce website that sells clothes and accessories for women, men .
 
 ## Technologies
 
