@@ -28,6 +28,7 @@ if (isset($_SESSION["type"]) && $_SESSION["type"] != 0) {
   <title>Admin Dahboard</title>
   <!-- Favicon -->
   <link rel="stylesheet" href="./assets/css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
   <link rel="stylesheet" href="assets/vendors/simple-datatables/style.css">
   <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
   <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
@@ -43,7 +44,7 @@ if (isset($_SESSION["type"]) && $_SESSION["type"] != 0) {
   <a class="skip-link sr-only" href="#skip-target">Skip to content</a>
   <div class="page-flex">
     <!-- ! Sidebar -->
-  
+    
     <aside class="sidebar " style="background-color:black !important;">
 
       <div class="sidebar-start">
@@ -86,15 +87,15 @@ if (isset($_SESSION["type"]) && $_SESSION["type"] != 0) {
             </li>
             <li>
             <li>
+            <!--  -->
               <a href="manage_products.php"><span class="icon image" aria-hidden="true"></span>Products</a>
             </li>
             <li>
+            <!--  -->
               <a href="manage_orders.php"><span class="icon paper" aria-hidden="true"></span>Orders</a>
             </li>
             <li>
-              <a href="manage_comments.php"><span class="icon paper" aria-hidden="true"></span>Comments</a>
-            <li>
-            <li>
+            <!--  -->
               <a href="manage_coupons.php"><span class="icon paper" aria-hidden="true"></span>Coupons</a>
             </li>
             <li>
@@ -135,6 +136,7 @@ if (isset($_SESSION["type"]) && $_SESSION["type"] != 0) {
       <nav class="main-nav--bg">
         <div class="container main-nav">
           <div class="main-nav-start">
+          <i class="fa-solid fa-bars" ></i>
             <!-- <div style=" background-color: blue;text-align:center;color: white;line-height: 1.5;width: 150px;padding: 10px;opacity: 0.5;"><a href="../index.php" style="text-decoration: none; color:white;">ORENS STOR</a></div> -->
           </div>
           <div class="main-nav-end">
