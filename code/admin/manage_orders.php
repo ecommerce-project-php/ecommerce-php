@@ -1,5 +1,5 @@
 <?php
-include("includes/header.php");
+include "./includes/header.php";
 $sql = "SELECT * FROM orders INNER JOIN users ON orders.order_user_id = users.user_id ";
 $result = mysqli_query($conn, $sql);
 $orders = mysqli_fetch_all($result, MYSQLI_ASSOC);

@@ -68,10 +68,10 @@ include "./includes/header.php"; ?>
     color: inherit;
     font-size: 1.4em;
   }
-  .card:hover {
+  /* .card:hover {
     background: linear-gradient(#717fe0d9, #717fe0);
     color: #ffffff;
-  }
+  } */
   .card:hover .img-container {
     transform: scale(1.15);
   }
@@ -107,16 +107,17 @@ include "./includes/header.php"; ?>
 					</h3>
 
 					<p class="stext-113 cl6 p-b-26">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris consequat consequat enim, non auctor massa ultrices non. Morbi sed odio massa. Quisque at vehicula tellus, sed tincidunt augue. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas varius egestas diam, eu sodales metus scelerisque congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas gravida justo eu arcu egestas convallis. Nullam eu erat bibendum, tempus ipsum eget, dictum enim. Donec non neque ut enim dapibus tincidunt vitae nec augue. Suspendisse potenti. Proin ut est diam. Donec condimentum euismod tortor, eget facilisis diam faucibus et. Morbi a tempor elit.
+   
+Hello and welcome to ORENS STORE, the place to find the best products  for every taste and occasion. We thoroughly check the quality of our goods, working only with reliable suppliers so that you only receive the best quality product.
+
+
 					</p>
 
 					<p class="stext-113 cl6 p-b-26">
-						Donec gravida lorem elit, quis condimentum ex semper sit amet. Fusce eget ligula magna. Aliquam aliquam imperdiet sodales. Ut fringilla turpis in vehicula vehicula. Pellentesque congue ac orci ut gravida. Aliquam erat volutpat. Donec iaculis lectus a arcu facilisis, eu sodales lectus sagittis. Etiam pellentesque, magna vel dictum rutrum, neque justo eleifend elit, vel tincidunt erat arcu ut sem. Sed rutrum, turpis ut commodo efficitur, quam velit convallis ipsum, et maximus enim ligula ac ligula.
+					We at ORENS STORE believe in high quality and exceptional customer service. But most importantly , we believe shopping is a right, not a luxury, so we strive to deliver the best products at the most affordable prices, and ship them to you regardless of where you are located.
 					</p>
 
-					<p class="stext-113 cl6 p-b-26">
-						Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on (+1) 96 716 6879
-					</p>
+				
 				</div>
 			</div>
 
@@ -132,7 +133,7 @@ include "./includes/header.php"; ?>
 	</div>
 <!-- our team -->
   <div class="row">
-        <h1>Our Team</h1>
+        <h>Our Team</h1>
       </div>
       <div class="row " style='margin:50px'>
         <!-- Column 1-->
@@ -142,15 +143,15 @@ include "./includes/header.php"; ?>
               <img src="../code/admin/img/avatar/avatar-illustrated-02.png" />
             </div>
             <h3>Omar AlOmari</h3>
-            <p>Web Developer</p>
+            <p>Csrum master</p>
             <div class="icons">
-              <a href="#">
+              <a href="https://www.linkedin.com/in/omar-alomari-823366244">
                 <i class="fab fa-linkedin"></i>
               </a>
-              <a href="#">
+              <a href="https://github.com/omaralomarii">
                 <i class="fab fa-github"></i>
               </a>
-              <a href="#">
+              <a href="omar.alomrii911@gmail.com">
                 <i class="fas fa-envelope"></i>
               </a>
             </div>
@@ -163,15 +164,15 @@ include "./includes/header.php"; ?>
             <img src="../code/admin/img/avatar/avatar-illustrated-02.png" />
             </div>
             <h3>Emad AlHashash</h3>
-            <p>Web Developer</p>
+            <p>Front-end Developer</p>
             <div class="icons">
-              <a href="#">
+              <a href="https://jo.linkedin.com/in/emad-alhashash-7646a423b">
                 <i class="fab fa-linkedin"></i>
               </a>
-              <a href="#">
+              <a href="https://github.com/emad-hash">
                 <i class="fab fa-github"></i>
               </a>
-              <a href="#">
+              <a href="emadhashash76@gmail.com">
                 <i class="fas fa-envelope"></i>
               </a>
             </div>
@@ -187,13 +188,13 @@ include "./includes/header.php"; ?>
             </h3>
             <p>Web Developer</p>
             <div class="icons">
-              <a href="#">
+              <a href="https://www.linkedin.com/in/osama-dasooky-b99216222/">
                 <i class="fab fa-linkedin"></i>
               </a>
-              <a href="#">
+              <a href="https://github.com/OsamaDasooky">
                 <i class="fab fa-github"></i>
               </a>
-              <a href="#">
+              <a href="osamadasooky6@gmail.com">
                 <i class="fas fa-envelope"></i>
               </a>
             </div>
@@ -208,13 +209,13 @@ include "./includes/header.php"; ?>
             </h3>
             <p>Web Developer</p>
             <div class="icons">
-              <a href="#">
+              <a href="https://www.linkedin.com/in/rashed-almayyas-alghwari-a5328b244/">
                 <i class="fab fa-linkedin"></i>
               </a>
-              <a href="#">
+              <a href="https://github.com/RashedAlmayyas">
                 <i class="fab fa-github"></i>
               </a>
-              <a href="#">
+              <a href="mayyasalghwari@gmail.com">
                 <i class="fas fa-envelope"></i>
               </a>
             </div>
@@ -227,15 +228,15 @@ include "./includes/header.php"; ?>
             </div>
             <h3>Sara Abed
             </h3>
-            <p>Web Developer</p>
+            <p>Product Owner</p>
             <div class="icons">
-              <a href="#">
+              <a href="https://www.linkedin.com/in/sara-abed-680533244/">
                 <i class="fab fa-linkedin"></i>
               </a>
-              <a href="#">
+              <a href="https://github.com/saraabed">
                 <i class="fab fa-github"></i>
               </a>
-              <a href="#">
+              <a href="saraalabad4@gmail.com">
                 <i class="fas fa-envelope"></i>
               </a>
             </div>
@@ -248,15 +249,15 @@ include "./includes/header.php"; ?>
             </div>
             <h3>Norman Alzawahreh
             </h3>
-            <p>Web Developer</p>
+            <p>Back-end developer</p>
             <div class="icons">
-              <a href="#">
+              <a href="https://www.linkedin.com/in/nourman-alzawahreh-558a20226/">
                 <i class="fab fa-linkedin"></i>
               </a>
-              <a href="#">
+              <a href="https://github.com/nourman23">
                 <i class="fab fa-github"></i>
               </a>
-              <a href="#">
+              <a href="nourmazawahreh@gmail.com">
                 <i class="fas fa-envelope"></i>
               </a>
             </div>

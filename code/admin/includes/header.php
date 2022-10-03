@@ -36,6 +36,19 @@ if (isset($_SESSION["type"]) && $_SESSION["type"] != 0) {
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   <!-- Custom styles -->
   <link rel="stylesheet" href="./assets/css/style.min.css">
+
+  <style>
+    .fa-bars,.fa-xmark{
+      visibility: hidden;
+      font-size:22px;
+      cursor: pointer;
+    }
+    @media (max-width:1200px) {
+      .fa-bars,.fa-xmark{
+        visibility:visible;
+    }
+    }
+  </style>
 </head>
 
 <body>
@@ -45,21 +58,14 @@ if (isset($_SESSION["type"]) && $_SESSION["type"] != 0) {
   <div class="page-flex">
     <!-- ! Sidebar -->
     
-    <aside class="sidebar " style="background-color:black !important;">
+    <aside class="sidebar "id='barView' style="background-color:black !important;">
 
       <div class="sidebar-start">
         <div class="sidebar-head">
         <div class="main-nav-start">
-            <div style="font-weight:800; text-align:center;color: white;line-height: 1.5;width: 150px;padding: 10px;"><a href="../index.php" style="text-decoration: none; color:white;">ORENS STOR</a></div>
+            <div style="font-weight:800; text-align:center;color: white;padding: 10px;display: flex;justify-content: space-between;width: 220px;"><a href="../index.php" style="text-decoration: none; color:white;">ORENS STOR</a> <i class="fa-solid fa-xmark" id='hide' style="font-size: 20px;" onclick="hide()"></i></div>
           </div>
-          <a href="index.php" class="logo-wrapper" title="Home">
-            <span class="sr-only">Home</span>
-            <!-- <span class="icon logo" aria-hidden="true"></span> -->
-            <div class="logo-text">
-              <i class="fa-light fa-house"></i>
-            </div>
-
-          </a>
+        
         
         </div>
         <div class="sidebar-body">
@@ -135,25 +141,26 @@ if (isset($_SESSION["type"]) && $_SESSION["type"] != 0) {
       <!-- ! Main nav -->
       <nav class="main-nav--bg">
         <div class="container main-nav">
-          <div class="main-nav-start">
-          <i class="fa-solid fa-bars" ></i>
-            <!-- <div style=" background-color: blue;text-align:center;color: white;line-height: 1.5;width: 150px;padding: 10px;opacity: 0.5;"><a href="../index.php" style="text-decoration: none; color:white;">ORENS STOR</a></div> -->
-          </div>
           <div class="main-nav-end">
-          <div class="nav-user-wrapper">
-            <button href="##" class="nav-user-btn dropdown-btn" title="My profile" type="button">
-              <span class="sr-only">My profile</span>
-              <span class="nav-user-img">
-                <img src="<?php echo  $admins[0]['admin_image'] ?>" alt="abcd">
-              </span>
-            </button>
-            <ul class="users-item-dropdown nav-user-dropdown dropdown">
-              <li><a class="danger" href="../logout.php">
+            <div class="nav-user-wrapper">
+              <button href="##" class="nav-user-btn dropdown-btn" title="My profile" type="button">
+                <span class="sr-only">My profile</span>
+                <span class="nav-user-img">
+                  <img src="<?php echo  $admins[0]['admin_image'] ?>" alt="abcd">
+                </span>
+              </button>
+              <ul class="users-item-dropdown nav-user-dropdown dropdown">
+                <li><a class="danger" href="../logout.php">
                   <i data-feather="log-out" aria-hidden="true"></i>
                   <span>Log out</span>
                 </a></li>
-            </ul>
+              </ul>
+            </div>
           </div>
+          <div class="main-nav-end">
+          <i class="fa-solid fa-bars" id='button'  onclick="viewsid()"></i>
+
+            <!-- <div style=" background-color: blue;text-align:center;color: white;line-height: 1.5;width: 150px;padding: 10px;opacity: 0.5;"><a href="../index.php" style="text-decoration: none; color:white;">ORENS STOR</a></div> -->
           </div>
         </div>
       </nav>

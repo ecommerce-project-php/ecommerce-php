@@ -3164,7 +3164,7 @@ label {
     position: fixed;
     z-index: 2;
     overflow-y: auto;
-    left: -1000px;
+    left: -300px;
   }
   .sidebar.hidden {
     left: 0;
@@ -3214,10 +3214,7 @@ label {
 }
 @media (max-width: 767.98px) {
   .main-nav {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-    -ms-flex-direction: column-reverse;
-    flex-direction: column-reverse;
+    align-items: center;
   }
   .main-nav-start,
   .main-nav-start input {
@@ -3228,7 +3225,6 @@ label {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    width: 100%;
   }
   .sort-bar {
     padding-bottom: 10px;
