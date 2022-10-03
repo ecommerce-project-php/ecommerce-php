@@ -46,7 +46,7 @@ include "./includes/header.php";
 						</span>
 
 						<p class="stext-115 cl6 size-213 p-t-18">
-							Coza Store Center 8th floor, 379 Hudson St, New York, NY 10018 US
+							ORENS Store Center 2th floor, 25 ALMANDINA St, Amman
 						</p>
 					</div>
 				</div>
@@ -62,7 +62,7 @@ include "./includes/header.php";
 						</span>
 
 						<p class="stext-115 cl1 size-213 p-t-18">
-							+1 800 1236879
+							+962 777 785587
 						</p>
 					</div>
 				</div>
@@ -78,7 +78,7 @@ include "./includes/header.php";
 						</span>
 
 						<p class="stext-115 cl1 size-213 p-t-18">
-							contact@example.com
+							contact@ORENS.com
 						</p>
 					</div>
 				</div>
@@ -88,9 +88,6 @@ include "./includes/header.php";
 </section>
 
 
-<!-- Map -->
-<div class="map">
-	<div class="size-303" id="google_map" data-map-x="40.691446" data-map-y="-73.886787" data-pin="images/icons/pin.png" data-scrollwhell="0" data-draggable="1" data-zoom="11"></div>
-</div>
+
 
 <?php include "./includes/footer.php"; ?>
