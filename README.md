@@ -39,3 +39,9 @@ https://drive.google.com/file/d/1K_S7nmwr_wgIAdXnK4Ek3ipfM31W1r94/view?usp=shari
 ## Trello
 
 https://trello.com/b/9ZduRwd7/ecommerce-website-php-mysql
+
+## Our Team
+
+Scrum master : Omar Alomari .
+Product owner : Sara Abed .
+Members : Osama Dasooky , Nourman alzawahreh , Rashed Alghwiri , Emad Alhashah .
