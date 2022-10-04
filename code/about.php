@@ -133,7 +133,7 @@ Hello and welcome to ORENS STORE, the place to find the best products  for every
 	</div>
 <!-- our team -->
   <div class="row">
-        <h>Our Team</h1>
+        <h1>Our Team</h1>
       </div>
       <div class="row " style='margin:50px'>
         <!-- Column 1-->
