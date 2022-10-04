@@ -8,16 +8,7 @@ $sql = "SELECT * FROM users ";
 $result = mysqli_query($conn, $sql);
 $num_of_users = $result->num_rows;
 ?>
-<?php
-$sql = "SELECT * FROM (
-  SELECT *
-  FROM `comments`
-  ORDER BY `comment_id` DESC
-  LIMIT 5
-) AS `comments` ORDER by comment_id ASC";
-$result = mysqli_query($conn, $sql);
-$last_comments = mysqli_fetch_all($result, MYSQLI_ASSOC);
-?>
+
 <?php
 if (isset($_SESSION['type'])) {
   if ($_SESSION["type"] == 2) {
