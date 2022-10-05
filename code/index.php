@@ -3,6 +3,7 @@ $title = "ORENS srore";
 include("admin/includes/connect.php");
 
 //after order complete
+
 if (isset($_GET["checked"])) {
 ?>
 	<script>

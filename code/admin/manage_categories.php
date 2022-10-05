@@ -141,8 +141,8 @@ if (isset($_GET["do"])) {
   <div class="row">
     <div class="offset-2 col-lg-9">
       <div class="users-table table-wrapper">
-        <button class="btn btn-primary" style="float: right;margin:10px 50px 0px 10px;">
-          <a href="?do=add">Add user </a>
+        <button class="btn " style="float: right;margin:10px 50px 0px 10px;background-color:#717fe0;">
+          <a href="?do=add" style="color:#fff;">Add category </a>
         </button>
         <table class="table table-striped" style="border: 2px solid #dce7f1 ;" id="table1">
           <thead>

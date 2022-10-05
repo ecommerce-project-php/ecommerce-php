@@ -136,8 +136,8 @@ if (isset($_GET["do"])) {
     <div class="row">
         <div class="offset-2 col-lg-9">
             <div class="users-table table-wrapper">
-                <button class="btn btn-primary" style="float: right;margin:10px 50px 0px 10px;">
-                    <a href="?do=add">Add Coupon </a>
+                <button class="btn btn-primary" style="float: right;margin:10px 50px 0px 10px;background-color:#717fe0;">
+                    <a href="?do=add" style="color:#fff;">Add Coupon </a>
                 </button>
                 <table class="table table-striped" style="border: 2px solid #dce7f1 ;" id="table1">
                     <thead>
@@ -161,7 +161,7 @@ if (isset($_GET["do"])) {
                                     <?php echo $value["coupon_status"] ?>
                                 </td>
                                 <td>
-                                    <a href="?do=edit&id=<?php echo $value["coupon_id"] ?>" class="btn btn-success">Edit</a>
+                                    <a href="?do=edit&id=<?php echo $value["coupon_id"] ?>" class="btn "style="color:#fff;background-color:#717fe0;">Edit</a>
                                 </td>
                             </tr>
                         <?php } ?>

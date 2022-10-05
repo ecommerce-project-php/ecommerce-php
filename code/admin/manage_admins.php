@@ -280,8 +280,8 @@ if (!isset($_GET['do'])) { ?>
         <div class="col-lg-12">
           <div class="users-table table-wrapper">
             <table class="table table-striped" id="table1">
-              <button class="btn btn-success" style="float: right;margin:10px 50px 0px 10px;">
-                <a href="manage_admins.php?do=add">Add Admin </a>
+              <button class="btn" style="float: right;margin:10px 50px 0px 10px;background-color:#717fe0;">
+                <a href="manage_admins.php?do=add"style="color:#fff;">Add Admin </a>
               </button>
               <thead>
                 <tr class="users-table-info">
@@ -315,7 +315,7 @@ if (!isset($_GET['do'])) { ?>
                         <?php echo isset($admin['admin_email']) ? $admin['admin_email'] : ''; ?>
                       </div>
                     </td>
-                    <td><span class="badge-pending" style='color:white; background:#717fe09c;'><?php echo isset($admin['admin_password']) ? $admin['admin_password'] : ''; ?> </span></td>
+                    <td><span class="badge-pending" style='color:white; background:#717fe09c;'><?php echo isset($admin['admin_password']) ? "**********" : ''; ?> </span></td>
                     <td><?php echo isset($admin['admin_type']) && $admin['admin_type'] == 0 ? "Admin" : "Super Admin"; ?></td>
                     <td>
                       <div class="table-data-feature">

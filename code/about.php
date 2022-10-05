@@ -154,23 +154,23 @@ h1 {
       <div class="row " style='margin:50px'>
         <!-- Column 1-->
         <div class="column">
-            <div class="card">
-                <div class="img-container">
-                    <img src="../code/admin/img/avatar/avatar-illustrated-02.png" />
-                </div>
-                <h3>Omar AlOmari</h3>
-                <p>Csrum master</p>
-                <div class="icons">
-                    <a href="https://www.linkedin.com/in/omar-alomari-823366244">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://github.com/omaralomarii">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="omar.alomrii911@gmail.com">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                </div>
+
+          <div class="card">
+            <div class="img-container">
+              <img src="../code/admin/img/avatar/avatar-illustrated-02.png" />
+            </div>
+            <h3>Omar AlOmari</h3>
+            <p>Scrum master</p>
+            <div class="icons">
+              <a href="https://www.linkedin.com/in/omar-alomari-823366244">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="https://github.com/omaralomarii">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="omar.alomrii911@gmail.com">
+                <i class="fas fa-envelope"></i>
+              </a>
             </div>
         </div>
         <!-- Column 2-->

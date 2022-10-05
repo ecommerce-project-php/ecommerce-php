@@ -1,10 +1,11 @@
 <?php
+ob_start();
 if (!isset($_GET["id"])) {
 	header('location:index.php');
 }
 ?>
 <?php
-ob_start(); // Output Buffering Start
+
 $title = "Product";
 include "./includes/header.php";
 function redirect($url)
@@ -101,7 +102,8 @@ if (isset($_GET["id"])) {
 				$size = array_column($_SESSION["cart"], 'size');
 				if (in_array($_POST['add_to_cart_id'], $items)  && in_array($_POST['size'], $size)) {
 					$_SESSION["cart"][$_POST['add_to_cart_id']  . $_POST['size']]["quantity"] += $_POST['num-product'];
-					header("location:product-detail.php?id={$_GET['id']}");
+					header("location:product-detail.php?id={$_GET['id']}&added");
+					
 				} else {
 					$item_array = array(
 						'product_id' => $_POST['add_to_cart_id'],
@@ -112,7 +114,7 @@ if (isset($_GET["id"])) {
 						'size' => $_POST['size']
 					);
 					$_SESSION["cart"][$_POST['add_to_cart_id'] . $_POST['size']] = $item_array;
-					header("location:product-detail.php?id={$_GET['id']}");
+					header("location:product-detail.php?id={$_GET['id']}&added");
 				}
 			} else {
 				$item_array = array(
@@ -124,13 +126,22 @@ if (isset($_GET["id"])) {
 					'size' => $_POST['size']
 				);
 				$_SESSION["cart"][$_POST['add_to_cart_id'] . $_POST['size']] = $item_array;
-				header("location:product-detail.php?id={$_GET['id']}");
+				header("location:product-detail.php?id={$_GET['id']}&added");
 			}
 		}
 	}
 }
 ?>
-
+<?php
+if (isset($_GET["added"])) {
+	?>
+		<script>
+			setTimeout(() => {
+				swal("Thank you!", "product successfully added", "success");
+			}, 100);
+		</script>
+	<?php } ?>
+?>
 
 <!-- breadcrumb -->
 <div class="container">
@@ -308,19 +319,6 @@ if (isset($_GET["id"])) {
 							</div>
 
 							<!--  -->
-							<div class="flex-w ml-5 flex-m p-l-100 p-t-40 respon7">
-								<a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Facebook">
-									<i class="fa fa-facebook"></i>
-								</a>
-
-								<a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Twitter">
-									<i class="fa fa-twitter"></i>
-								</a>
-
-								<a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Google Plus">
-									<i class="fa fa-google-plus"></i>
-								</a>
-							</div>
 						</form>
 					</div>
 				</div>

@@ -257,8 +257,8 @@ if (!isset($_GET['do'])) { ?>
           <div class="users-table table-wrapper">
             <table class="table table-striped" id="table1">
 
-              <button class="btn btn-primary" style="float: right;margin:10px 50px 0px 10px;">
-                <a href="manage_users.php?do=add">Add user </a>
+              <button class="btn" style="float: right;margin:10px 50px 0px 10px;background-color:#717fe0;">
+                <a href="manage_users.php?do=add" style="color:#fff;">Add user </a>
               </button>
               <thead>
                 <tr class="users-table-info">
@@ -291,11 +291,11 @@ if (!isset($_GET['do'])) { ?>
                     <td><?php echo isset($user['user_creation_date']) ? $user['user_creation_date'] : ''; ?></td>
                     <td>
                       <div class="table-data-feature">
-                        <button class="btn btn-success" title="edit">
-                          <a href="manage_users.php?do=edit&id=<?php echo $user['user_id'] ?>"> edit </a>
+                        <button class="btn" style="background-color:#717fe0;" title="edit">
+                          <a href="manage_users.php?do=edit&id=<?php echo $user['user_id'] ?>"style="color:#fff;"> Edit </a>
                         </button>
                         <button class="btn btn-danger" title="delete">
-                          <a href="manage_users.php?delete=<?php echo $user['user_id'] ?>"> delete </a>
+                          <a href="manage_users.php?delete=<?php echo $user['user_id'] ?>"> Delete </a>
                         </button>
                       </div>
                     </td>
