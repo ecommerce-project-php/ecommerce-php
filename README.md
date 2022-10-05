@@ -31,11 +31,14 @@ This Project is an E_commerce website that sells clothes and accessories for wom
 4. MDN : https://developer.mozilla.org/en-US/
 
 
-## Wireframe & Mockup
-
-https://drive.google.com/file/d/1K_S7nmwr_wgIAdXnK4Ek3ipfM31W1r94/view?usp=sharing
+## Wireframe
+[
+https://drive.google.com/file/d/1K_S7nmwr_wgIAdXnK4Ek3ipfM31W1r94/view?usp=sharing](https://www.figma.com/file/JqFPtQq60U5AM8nkTJbL6U/Untitled
+)
 
 ## Mockup
+
+https://drive.google.com/file/d/10CAOoQJwf7No2cjI9lceZqPgxYCU4GrK/view?usp=sharing
 
 ## Trello
 

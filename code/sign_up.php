@@ -49,9 +49,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 return false;
             }  
             else if ($user_name == "") {
-                return false;
                 $this->user_name_Error = "The user_name shouldn't be empty!";
                 $this->check=0;
+                return false;
             }
             return true ;
         }
@@ -115,7 +115,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             } else {
                 echo "Error: " . $sql . "<br>" . mysqli_error($conn);
             }
-            
+            //outo increment for id 
             $check_exist2 = "SELECT * FROM users  ORDER BY user_id DESC";
             $result2 = mysqli_query($conn, $check_exist2);
             $data2 = mysqli_fetch_all($result2, MYSQLI_ASSOC);

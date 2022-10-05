@@ -72,10 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     if ($trueValid->check == 1) {
-        //admin
-        $check_exist = "SELECT * FROM admins WHERE admin_email = '$email'";
-        $result = mysqli_query($conn, $check_exist);
-        $data = mysqli_fetch_array($result, MYSQLI_NUM);
+        
         //user
         $check_exist = "SELECT * FROM users WHERE user_email = '$email'";
         $result = mysqli_query($conn, $check_exist);
@@ -101,6 +98,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $error = "your email isnt exist please register";
         }
 
+
+//admin
+        $check_exist = "SELECT * FROM admins WHERE admin_email = '$email'";
+        $result = mysqli_query($conn, $check_exist);
+        $data = mysqli_fetch_array($result, MYSQLI_NUM);
         //admin
         if ($check_exist) {
             $sql = "SELECT * FROM admins WHERE admin_email = '$email'";

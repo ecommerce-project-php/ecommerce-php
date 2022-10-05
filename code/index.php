@@ -1,6 +1,8 @@
 <?php
-$title = "OREN";
+$title = "ORENS srore";
 include("admin/includes/connect.php");
+
+//after order complete
 
 if (isset($_GET["checked"])) {
 ?>
@@ -135,6 +137,11 @@ $cat  = mysqli_fetch_all($result, MYSQLI_ASSOC);
 			<?php   } ?>
 
 			<?php
+
+
+
+
+
 
 			$sql = "SELECT * FROM categories WHERE category_name='Shoes' OR category_name='Bags' OR category_name='Accessories'";
 			$result = mysqli_query($conn, $sql);
