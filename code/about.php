@@ -146,13 +146,12 @@ h1 {
                 </div>
             </div>
         </div>
-
-    </div>
-    <!-- our team -->
-    <div class="row justify-content-around text-6xl " style="color:black;font-family: Poppins-Bold;font-size: 25px;">
-        <h>Our Team</h1>
-    </div>
-    <div class="row " style='margin:50px'>
+	</div>
+<!-- our team -->
+  <div class="row">
+        <h1>Our Team</h1>
+      </div>
+      <div class="row " style='margin:50px'>
         <!-- Column 1-->
         <div class="column">
             <div class="card">

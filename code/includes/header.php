@@ -129,7 +129,7 @@ if (isset($_GET['delete'])) {
 																																																												} else {
 																																																													echo 0;
 																																																												}; ?>">
-							<a href="shoping-cart.php"style="color:black;" class='hov-cl1'><i class="zmdi zmdi-shopping-cart hov-cl"></i></a>
+							<i class="zmdi zmdi-shopping-cart hov-cl"></i>
 						</div>
 
 					</div>
@@ -158,7 +158,7 @@ if (isset($_GET['delete'])) {
 																																																										} else {
 																																																											echo 0;
 																																																										}; ?>">
-							<a href="shoping-cart.php" style="color:black;"class="hov-cl"><i class="zmdi zmdi-shopping-cart hov-cl"></i></a>
+							<i class="zmdi zmdi-shopping-cart hov-cl"></i>
 
 				</div>
 
@@ -234,7 +234,7 @@ if (isset($_GET['delete'])) {
 	</header>
 
 	<!-- Cart -->
-	<!-- <div class="wrap-header-cart js-panel-cart">
+	<div class="wrap-header-cart js-panel-cart">
 		<div class="s-full js-hide-cart"></div>
 
 		<div class="header-cart flex-col-l p-l-65 p-r-25">
@@ -293,4 +293,4 @@ if (isset($_GET['delete'])) {
 				</div>
 			</div>
 		</div>
-	</div> -->
+	</div>
