@@ -128,7 +128,7 @@ if (isset($_SESSION['type']) && $_SESSION['type'] == 0) {
     $sql = "SELECT * FROM orders WHERE order_user_id =$id";
     $result = mysqli_query($conn, $sql);
     $order  = mysqli_fetch_all($result, MYSQLI_ASSOC);
-    if ($order > 0) {
+    if ($result->num_rows > 0) {
     ?>
 <h2 class="text-center"> Your Orders History</h2><br>
 <div class="order_cards d-flex w-75 flex-wrap  " style="margin:10px auto">

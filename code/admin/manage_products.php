@@ -464,7 +464,7 @@ if (!isset($_GET['do'])) {
         <div class="col-lg-12">
           <div class="users-table table-wrapper">
             <table class="table table-striped" id="table1">
-              <a href="manage_products.php?do=add" class="btn btn-success" style="float: right;margin:10px 50px 0px 10px;">Add Product</a>
+              <a href="manage_products.php?do=add" class="btn " style="float: right;margin:10px 50px 0px 10px; background-color:#717fe0;color:#fff;">Add Product</a>
               <thead>
                 <tr class="users-table-info">
                   <th>

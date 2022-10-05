@@ -56,8 +56,9 @@ if (isset($_GET['delete'])) {
 	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 	<!--===============================================================================================-->
 	<link rel="stylesheet" href="./css/order.css">
-	<link rel="stylesheet" href="./css/styling.css">
 	<!--===============================================================================================-->
+	<link rel="stylesheet" href="./css/styling.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.37/sweetalert2.css">
 </head>
 
 <body class="animsition">

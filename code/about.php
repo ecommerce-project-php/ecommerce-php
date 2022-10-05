@@ -133,7 +133,7 @@ Hello and welcome to ORENS STORE, the place to find the best products  for every
 	</div>
 <!-- our team -->
   <div class="row">
-        <h>Our Team</h1>
+        <h1>Our Team</h1>
       </div>
       <div class="row " style='margin:50px'>
         <!-- Column 1-->
@@ -143,7 +143,7 @@ Hello and welcome to ORENS STORE, the place to find the best products  for every
               <img src="../code/admin/img/avatar/avatar-illustrated-02.png" />
             </div>
             <h3>Omar AlOmari</h3>
-            <p>Csrum master</p>
+            <p>Scrum master</p>
             <div class="icons">
               <a href="https://www.linkedin.com/in/omar-alomari-823366244">
                 <i class="fab fa-linkedin"></i>
