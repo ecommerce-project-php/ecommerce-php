@@ -56,31 +56,37 @@ if (isset($_GET['do'])) {
                 </thead>
                 <tbody>
                     <?php foreach ($orders as $key => $order) { ?>
-                        <tr>
-                            <td><?php echo isset($order['order_id']) ? $order['order_id'] : ''; ?></td>
-                            <td><?php echo isset($order['order_user_name']) ? $order['order_user_name'] : ''; ?></td>
-                            <td><?php echo isset($order['user_gender']) ? $order['user_gender'] : ''; ?></td>
-                            <td class="px-6 py-4">
-                                <div class="text-sm text-gray-900 flex justify-center items-center">
-                                    <?php echo $order["order_details"]; ?>
+                    <tr>
+                        <td><?php echo isset($order['order_id']) ? $order['order_id'] : ''; ?></td>
+                        <td><?php echo isset($order['order_user_name']) ? $order['order_user_name'] : ''; ?></td>
+                        <td><?php echo isset($order['user_gender']) ? $order['user_gender'] : ''; ?></td>
+                        <td class="px-6 py-1 w-25 ">
+                            <div class="text-sm text-gray-900 flex justify-center items-center w-75">
+                                <?php echo $order["order_details"]; ?>
+                            </div>
+                        </td>
+                        <td><?php echo isset($order['order_location']) ? $order['order_location'] : ''; ?></td>
+                        <td><?php echo isset($order['order_mobile']) ? $order['order_mobile'] : ''; ?></td>
+                        <td><?php echo isset($order['order_date']) ? $order['order_date'] : ''; ?></td>
+                        <td><?php echo isset($order['order_total']) ? $order['order_total'] : ''; ?></td>
+                        <td><?php echo isset($order['order_status']) ? $order['order_status'] : ''; ?></td>
+                        <td class="row">
+                            <div class="d-grid gap-2 d-md-block status">
+                                <div class="btn btn-warning btn-sm active"><a
+                                        href="manage_orders.php?do=prepare&id=<?php echo isset($order['order_id']) ? $order['order_id'] : ''; ?>">preparing</a>
+                                </div><br>
+                                <div class="btn btn-secondary btn-sm"><a
+                                        href="manage_orders.php?do=deliver&id=<?php echo isset($order['order_id']) ? $order['order_id'] : ''; ?>">on
+                                        deliver</a></div><br>
+                                <div class="btn  btn-success btn-sm"> <a
+                                        href="manage_orders.php?do=arrive&id=<?php echo isset($order['order_id']) ? $order['order_id'] : ''; ?>">arrive</a>
+                                </div><br>
+                                <div class="btn  btn-danger btn-sm"><a
+                                        href="manage_orders.php?do=block&id=<?php echo isset($order['order_id']) ? $order['order_id'] : ''; ?>">block</a>
                                 </div>
-                            </td>
-                            <td><?php echo isset($order['order_location']) ? $order['order_location'] : ''; ?></td>
-                            <td><?php echo isset($order['order_mobile']) ? $order['order_mobile'] : ''; ?></td>
-                            <td><?php echo isset($order['order_date']) ? $order['order_date'] : ''; ?></td>
-                            <td><?php echo isset($order['order_total']) ? $order['order_total'] : ''; ?></td>
-                            <td><?php echo isset($order['order_status']) ? $order['order_status'] : ''; ?></td>
-                            <td class="row">
-                                <div class="d-grid gap-2 d-md-block">
-                                    <a href="manage_orders.php?do=prepare&id=<?php echo isset($order['order_id']) ? $order['order_id'] : ''; ?>" class="btn btn-outline-warning btn-sm">preparing</a>
-                                    <a href="manage_orders.php?do=deliver&id=<?php echo isset($order['order_id']) ? $order['order_id'] : ''; ?>" class="btn btn-outline-primary btn-sm">on deliver</a>
-                                </div>
-                                <div class="d-grid gap-2 d-md-block" style="margin-top: 10px;margin-left:20px;">
-                                    <a href="manage_orders.php?do=arrive&id=<?php echo isset($order['order_id']) ? $order['order_id'] : ''; ?>" class="btn btn-outline-success btn-sm">arrive</a>
-                                    <a href="manage_orders.php?do=block&id=<?php echo isset($order['order_id']) ? $order['order_id'] : ''; ?>" class="btn btn-outline-danger btn-sm">block</a>
-                                </div>
-                            </td>
-                        </tr>
+                            </div>
+                        </td>
+                    </tr>
                     <?php } ?>
 
                 </tbody>
