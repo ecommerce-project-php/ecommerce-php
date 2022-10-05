@@ -32,8 +32,9 @@ This Project is an E_commerce website that sells clothes and accessories for wom
 
 
 ## Wireframe
-
-https://drive.google.com/file/d/1K_S7nmwr_wgIAdXnK4Ek3ipfM31W1r94/view?usp=sharing
+[
+https://drive.google.com/file/d/1K_S7nmwr_wgIAdXnK4Ek3ipfM31W1r94/view?usp=sharing](https://www.figma.com/file/JqFPtQq60U5AM8nkTJbL6U/Untitled
+)
 
 ## Mockup
 
