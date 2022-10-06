@@ -71,7 +71,7 @@ if (isset($_GET['delete'])) {
 
 					<!-- Logo desktop -->
 					<a href="index.php" class="logo" style="color:black;font-size:20px;">
-						<b style="">ORENS </b>&nbsp; STORE
+						<b style="color:#717fe0;">ORENS </b>&nbsp; STORE
 					</a>
 
 					<!-- Menu desktop -->

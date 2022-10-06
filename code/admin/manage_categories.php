@@ -20,6 +20,7 @@ if (isset($_GET["do"])) {
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_array($result);
   }
+
   // delete
   if ($do == "delete") {
     $id = $_GET["id"];
@@ -27,6 +28,7 @@ if (isset($_GET["do"])) {
     $result = mysqli_query($conn, $sql);
     redirect("manage_categories.php");
   }
+
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $category_name = $_POST["category_name"];
     $category_description = $_POST["category_description"];
@@ -45,6 +47,7 @@ if (isset($_GET["do"])) {
           $check = 0;
           $imageError = "Please make sure to select an image";
         }
+        
     // upload image
     if ($check == 1) {
       $target_dir = "uploads/category_image/";
@@ -138,9 +141,9 @@ if (isset($_GET["do"])) {
 
 <!-- start table -->
 <?php if (!isset($_GET["do"])) { ?>
-  <div class="row">
+  <div class="row" style="margin-left:0;margin-right:0;">
     <div class="offset-2 col-lg-9">
-      <div class="users-table table-wrapper">
+      <div class="users-table ">
         <button class="btn " style="float: right;margin:10px 50px 0px 10px;background-color:#717fe0;">
           <a href="?do=add" style="color:#fff;">Add category </a>
         </button>

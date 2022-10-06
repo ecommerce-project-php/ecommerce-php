@@ -220,7 +220,7 @@ $cat  = mysqli_fetch_all($result, MYSQLI_ASSOC);
 								</a>
 
 								<span class="stext-105 cl3">
-									<?php echo "$" . $val["product_price"]   ?>
+									<b><?php echo "$" . $val["product_price"]   ?></b>
 								</span>
 							</div>
 						</div>
@@ -277,7 +277,7 @@ $cat  = mysqli_fetch_all($result, MYSQLI_ASSOC);
 									<?php echo $val["product_name"]   ?>
 								</a>
 								<span class="stext-105 cl3">
-									<?php echo "$" . $val["product_price"]   ?>
+									<b><?php echo "$" . $val["product_price"]   ?></b>
 								</span>
 							</div>
 						</div>

@@ -99,11 +99,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
 
-//admin
+        //admin
         $check_exist = "SELECT * FROM admins WHERE admin_email = '$email'";
         $result = mysqli_query($conn, $check_exist);
         $data = mysqli_fetch_array($result, MYSQLI_NUM);
-        //admin
         if ($check_exist) {
             $sql = "SELECT * FROM admins WHERE admin_email = '$email'";
             $result = mysqli_query($conn, $sql);

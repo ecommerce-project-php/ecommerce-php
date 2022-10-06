@@ -334,9 +334,9 @@ if (isset($_GET["added"])) {
 							<a class="nav-link active" data-toggle="tab" href="#description" role="tab">Description</a>
 						</li>
 
-						<li class="nav-item p-b-10">
+						<!-- <li class="nav-item p-b-10">
 							<a class="nav-link" data-toggle="tab" href="#reviews" role="tab">Reviews (<?php print_r(count($comments)); ?>)</a>
-						</li>
+						</li> -->
 					</ul>
 
 					<!-- Tab panes -->
