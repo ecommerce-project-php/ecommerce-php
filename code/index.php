@@ -1,7 +1,9 @@
 <?php
-$title = "CozaStore";
+$title = "ORENS srore";
 include("admin/includes/connect.php");
-/*adding new visitor */
+
+//after order complete
+
 if (isset($_GET["checked"])) {
 ?>
 	<script>
