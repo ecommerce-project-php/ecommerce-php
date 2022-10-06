@@ -264,7 +264,7 @@ $tags_unique = array_unique($tagsArray);
                                     </a>
 
                                     <span class="stext-105 cl3">
-                                        <?php echo '$' . $val['product_price']; ?>
+                                       <b> <?php echo '$' . $val['product_price']; ?></b>
                                     </span>
                                 </div>
                             </div>

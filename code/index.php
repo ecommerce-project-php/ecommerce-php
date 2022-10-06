@@ -1,7 +1,7 @@
 <?php
-$title = "OREN";
+$title = "CozaStore";
 include("admin/includes/connect.php");
-
+/*adding new visitor */
 if (isset($_GET["checked"])) {
 ?>
 	<script>
@@ -136,6 +136,11 @@ $cat  = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 			<?php
 
+
+
+
+
+
 			$sql = "SELECT * FROM categories WHERE category_name='Shoes' OR category_name='Bags' OR category_name='Accessories'";
 			$result = mysqli_query($conn, $sql);
 			$cat2  = mysqli_fetch_all($result, MYSQLI_ASSOC);
@@ -213,7 +218,7 @@ $cat  = mysqli_fetch_all($result, MYSQLI_ASSOC);
 								</a>
 
 								<span class="stext-105 cl3">
-									<?php echo "$" . $val["product_price"]   ?>
+									<b><?php echo "$" . $val["product_price"]   ?></b>
 								</span>
 							</div>
 						</div>
@@ -270,7 +275,7 @@ $cat  = mysqli_fetch_all($result, MYSQLI_ASSOC);
 									<?php echo $val["product_name"]   ?>
 								</a>
 								<span class="stext-105 cl3">
-									<?php echo "$" . $val["product_price"]   ?>
+									<b><?php echo "$" . $val["product_price"]   ?></b>
 								</span>
 							</div>
 						</div>

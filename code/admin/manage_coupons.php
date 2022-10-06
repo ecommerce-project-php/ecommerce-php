@@ -6,7 +6,7 @@ if (!isset($_SESSION["type"]) || $_SESSION["type"] == 0) {
     redirect('../index.php');
 }
 
-// select all comments
+// select all coupons
 $sql = "SELECT * FROM coupons";
 $result = mysqli_query($conn, $sql);
 $coupons = mysqli_fetch_all($result, MYSQLI_ASSOC);
@@ -28,7 +28,7 @@ if (isset($_GET["do"])) {
         redirect("manage_coupons.php");
     }
 
-    //from form
+    //form data & validation 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $coupon_text = $_POST["coupon_text"];
         $coupon_percent = $_POST["coupon_percent"];
@@ -133,9 +133,9 @@ if (isset($_GET["do"])) {
 
 <!-- start table -->
 <?php if (!isset($_GET["do"])) { ?>
-    <div class="row">
+    <div class="row" style="margin-left:0;margin-right:0;">
         <div class="offset-2 col-lg-9">
-            <div class="users-table table-wrapper">
+            <div class="users-table ">
                 <button class="btn btn-primary" style="float: right;margin:10px 50px 0px 10px;background-color:#717fe0;">
                     <a href="?do=add" style="color:#fff;">Add Coupon </a>
                 </button>
